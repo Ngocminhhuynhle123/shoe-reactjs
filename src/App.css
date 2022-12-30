@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+}
+
+.btn-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#content .card-img-top {
+    width: 70%;
+    margin: auto;
+}
+
+#content .btnCardCT {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+#content .card-title-modal1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.imgModal{
+    width: 100px;
+
+}
