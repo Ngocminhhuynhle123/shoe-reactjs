@@ -39,21 +39,22 @@ export default class Cart extends Component {
         })
     }
     upDownDevice = (device, method) => {
-        let deviceFin = this.state.cart.find(item => item.id === device.id)
+        let cartCP=[...this.state.cart]
+        let deviceFin = cartCP.find(item => item.id === device.id)
         if (deviceFin) {
             deviceFin.soLuong += method;
+            this.setState({
+                cart: this.state.cart
+            })
             if (deviceFin.soLuong < 1) {
                 if (window.confirm('ban co muon xoa san pham khong')) {
-                    this.deleteDevice(deviceFin)
-
+                    this.deleteDevice(device)
                 }
                 else {
                     deviceFin.soLuong = 1
                 }
             }
-            this.setState({
-                cart: this.state.cart
-            })
+
         }
     }
     render() {
