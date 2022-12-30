@@ -37,7 +37,6 @@ export default class Cart extends Component {
         this.setState({
             cart
         })
-        console.log(cart);
     }
     upDownDevice = (device, method) => {
         let deviceFin = this.state.cart.find(item => item.id === device.id)
